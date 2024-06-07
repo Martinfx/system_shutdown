@@ -19,6 +19,10 @@
 //!
 //! In most of the systems it does not requires the user to be root/admin.
 
+#[cfg(target_os = "freebsd")]
+#[path = "linux.rs"]
+mod os;
+
 #[cfg(target_os = "linux")]
 #[path = "linux.rs"]
 mod os;
